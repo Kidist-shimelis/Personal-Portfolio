@@ -1,0 +1,375 @@
+/* Add these animation keyframes */
+@keyframes progressAnimation {
+  from { width: 0; }
+  to { width: var(--final-width); }
+}
+
+.about {
+  padding: 100px 10%;
+  background: linear-gradient(135deg, #fafafd 0%, #a6b0cb 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+.achievment-card {
+  /* ... existing styles ... */
+  background: white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.achievment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+  z-index: -1;
+}
+
+.achievment-card:hover::before {
+  left: 100%; /* Slide gradient across */
+}
+.about-title h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d2e32;
+  display: inline-block;
+}
+
+.about-title h1 span {
+  color: #6C63FF;
+  position: relative;
+}
+
+.about-title h1 span::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(108, 99, 255, 0.2);
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.about-title img {
+  position: absolute;
+  top: -15px;
+  right: 32%;
+  width: 80px;
+  opacity: 0.7;
+  animation: floating 3s ease-in-out infinite;
+}
+
+.about-sections {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.profile-image-container {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 30px rgba(108, 99, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.02);
+}
+
+.image-highlight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(108, 99, 255, 0.1));
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.about-right {
+  flex: 1.5;
+}
+
+.about-para p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-para .highlight {
+  color: #6C63FF;
+  font-weight: 600;
+  position: relative;
+}
+
+.about-para .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(108, 99, 255, 0.2);
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #6C63FF, #FF6584, transparent);
+  margin: 25px 0;
+  opacity: 0.3;
+}
+
+.about-skills {
+  margin: 40px 0;
+}
+
+.about-skills h3, .about-achievments h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2d2e32;
+  position: relative;
+  display: inline-block;
+}
+
+.about-skills h3 span, .about-achievments h3 span {
+  color: #6C63FF;
+}
+
+.title-divider {
+  height: 3px;
+  width: 50px;
+  background: linear-gradient(90deg, #6C63FF, #FF6584);
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.about-skill {
+  margin-bottom: 20px;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.skill-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.skill-header p {
+  flex: 1;
+  font-weight: 500;
+  color: #2d2e32;
+}
+
+.skill-percent {
+  font-weight: 600;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9e9e9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 10px;
+  animation: progressAnimation 1.5s ease-out forwards;
+}
+
+.achievments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+}
+
+.achievment-card {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.achievment-icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.achievment-card:hover .achievment-icon {
+  transform: scale(1.2);
+}
+
+.achievment-card h1 {
+  font-size: 2.5rem;
+  color: #2d2e32;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.achievment-card:hover h1 {
+  color: #6C63FF;
+}
+
+.achievment-title {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 992px) {
+  .about-sections {
+    flex-direction: column;
+  }
+  
+  .profile-image-container {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 5%;
+  }
+  
+  .about-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-title img {
+    right: 25%;
+    width: 60px;
+  }
+}
+/* About Section Container */
+.about {
+  padding: 80px 8%; /* Reduced from 100px for better proportions */
+  background: linear-gradient(135deg, #fafafd 0%, #a6b0cb 100%);
+}
+
+/* Content Layout */
+.about-sections {
+  display: flex;
+  gap: 60px; /* Increased from 50px */
+  align-items: flex-start; /* Changed from center for better text alignment */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image Container */
+.about-left {
+  flex: 1;
+  padding-top: 20px; /* Adds space between title and image */
+}
+
+.profile-image-container {
+  width: 320px; /* Slightly reduced from 350px */
+  height: 320px;
+  margin: 0 auto; /* Centers image in its container */
+}
+
+/* Text Content */
+.about-right {
+  flex: 1.5;
+  padding-top: 10px; /* Aligns text with image */
+}
+
+.about-para p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 25px; /* Increased from 20px */
+  color: #444; /* Slightly darker for better readability */
+}
+
+/* Divider Between Paragraph and Skills */
+.divider {
+  margin: 30px 0; /* Increased from 25px */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .about-sections {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .profile-image-container {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 20px; /* Added space between image and text */
+  }
+  
+  .about-right {
+    width: 100%;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 5%;
+  }
+  
+  .profile-image-container {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .about-para p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+}

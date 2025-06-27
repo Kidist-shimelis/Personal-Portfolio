@@ -1,0 +1,131 @@
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.section-title span {
+  color: #6C63FF;
+}
+
+.title-divider {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(to right, #6C63FF, #FF6584);
+  margin: 0 auto 40px;
+}
+
+/* Two-column layout */
+.skills-columns {
+  display: flex;
+  gap: 40px;
+}
+
+.skills-column {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.skills-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Technical Skills (Left Column) */
+.technical-skills .skill-item {
+  margin-bottom: 25px;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.skill-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.skill-percent {
+  font-weight: 600;
+}
+
+.skill-bar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
+
+/* Soft Skills (Right Column) */
+.soft-skills .skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.soft-skills .skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  transition: transform 0.3s ease;
+}
+
+.soft-skills .skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.soft-skill-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.soft-skill-name {
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-columns {
+    flex-direction: column;
+  }
+  
+  .soft-skills .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .soft-skills .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
