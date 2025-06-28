@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Hero.css';
-import profile_img from "../../assets/kiii.jpg";
+import profile_img from "../../assets/kidLogo.png";
 import bg_pattern1 from "../../assets/computer1.png";
 import bg_pattern2 from "../../assets/computer2.png";
 import { FaArrowRight } from 'react-icons/fa';
@@ -56,9 +56,9 @@ const Hero = () => {
             <a href="#contact" className="btn btn-connect">
               Connect with Me <FaArrowRight className="btn-icon" />
             </a>
-            <a href="/cvv.pdf" download className="btn btn-resume">
-              My Resume <FaArrowRight className="btn-icon" />
-            </a>
+        <a href="/cvv.pdf" download="MyResume.pdf" className="btn btn-resume">
+  My Resume <FaArrowRight className="btn-icon" />
+</a>
           </div>
         </div>
       </div>

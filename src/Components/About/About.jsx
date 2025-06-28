@@ -22,6 +22,9 @@ const About = () => {
       <div className="about-title">
         <h1>About <span>Me</span></h1>
         <img src={logo} alt="decoration" className="floating" />
+
+        <img src={logo} alt="decoration" className="floating" />
+
       </div>
       
       <div className="about-sections">
@@ -46,6 +49,7 @@ const About = () => {
                   <div className="achievment-icon" style={{ color: item.color }}>
                     {item.icon}
                   </div>
+                  
                   <h1>{item.number}</h1>
                   <p className="achievment-title">{item.title}</p>
                 </div>
@@ -58,20 +62,19 @@ const About = () => {
         <div className="about-right">
           <div className="about-content">
             <div className="about-para">
+              
               <p>
                 I'm a <span className="highlight">passionate full-stack developer</span> with expertise in modern web technologies. 
                 I specialize in creating <span className="highlight">responsive, performant applications</span> with clean, maintainable code 
                 and intuitive interfaces that users love.
               </p>
               <div className="divider"></div>
-              <p>
+            <p>
                 Having <span className="highlight">some experience</span> across the stack, I bring projects from concept 
                 to completion with  attention to detail. My approach combines <span className="highlight">technical excellence</span> 
                 with <span className="highlight">user-centric design</span> principles.
               </p>
             </div>
-            
-           
           </div>
         </div>
       </div>
