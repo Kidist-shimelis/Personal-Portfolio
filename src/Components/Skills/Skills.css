@@ -1,14 +1,18 @@
+/* === Modern Skills Section === */
 .skills-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 15px;
-  color: #333;
+  color: #1a202c;
+  position: relative;
+  display: inline-block;
 }
 
 .section-title span {
@@ -16,61 +20,88 @@
 }
 
 .title-divider {
-  height: 3px;
+  height: 4px;
   width: 80px;
   background: linear-gradient(to right, #6C63FF, #FF6584);
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
+  border-radius: 2px;
 }
 
-/* Two-column layout */
+/* === Two-column Layout === */
 .skills-columns {
   display: flex;
   gap: 40px;
+  justify-content: center;
 }
 
 .skills-column {
   flex: 1;
+  min-width: 300px;
+  max-width: 500px;
   background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .skills-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  color: #2c3e50;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #2d3748;
   text-align: center;
+  position: relative;
+  padding-bottom: 10px;
 }
 
-/* Technical Skills (Left Column) */
+.skills-column h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #6C63FF;
+}
+
+/* === Technical Skills (Left Column) === */
 .technical-skills .skill-item {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .skill-header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .skill-icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-right: 15px;
+  color: #6C63FF;
 }
 
 .skill-name {
   flex: 1;
   font-weight: 500;
+  color: #4a5568;
 }
 
 .skill-percent {
   font-weight: 600;
+  color: #2d3748;
 }
 
 .skill-bar {
   height: 8px;
-  background: #f0f0f0;
+  background: #edf2f7;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -78,10 +109,12 @@
 .skill-progress {
   height: 100%;
   border-radius: 4px;
+  background: linear-gradient(90deg, #6C63FF, #8B7BFF);
   transition: width 1s ease-in-out;
+  box-shadow: 0 2px 5px rgba(108, 99, 255, 0.2);
 }
 
-/* Soft Skills (Right Column) */
+/* === Soft Skills (Right Column) === */
 .soft-skills .skills-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -92,35 +125,53 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-  background: #f9f9f9;
-  transition: transform 0.3s ease;
+  padding: 25px 20px;
+  border-radius: 12px;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
 }
 
 .soft-skills .skill-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: #c3dafe;
 }
 
 .soft-skill-icon {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 15px;
+  color: #6C63FF;
 }
 
 .soft-skill-name {
   font-weight: 500;
   text-align: center;
+  color: #4a5568;
 }
 
-/* Responsive Design */
+/* === Responsive Design === */
 @media (max-width: 768px) {
+  .skills-container {
+    padding: 80px 20px;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
   .skills-columns {
     flex-direction: column;
+    gap: 30px;
   }
   
   .soft-skills .skills-list {
     grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .skills-column {
+    padding: 30px;
   }
 }
 
@@ -128,4 +179,39 @@
   .soft-skills .skills-list {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+}
+/* === Modern Skills Section === */
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  text-align: center; /* Added to center all child elements */
+}
+
+.section-title {
+  display: inline-block; /* Changed to inline-block */
+  font-size: 2.8rem;
+  margin: 0 auto 15px; /* Centered with auto margins */
+  color: #1a202c;
+  position: relative;
+  text-align: center; /* Ensures text is centered within */
+  width: 100%; /* Takes full width */
+}
+
+.section-title span {
+  color: #6C63FF;
+}
+
+.title-divider {
+  height: 4px;
+  width: 80px;
+  background: linear-gradient(to right, #6C63FF, #FF6584);
+  margin: 0 auto 50px; /* Centered with auto margins */
+  border-radius: 2px;
+  display: block; /* Ensures it's treated as block-level */
 }

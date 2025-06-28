@@ -31,8 +31,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <span className="logo-text">Portfolio</span>
-          <span className="logo-dot"></span>
+<div className="logo-container">
+  <img src="kidLogo.png" alt="Portfolio Logo" className="logo-image" />
+</div>          <span className="logo-dot"></span>
         </div>
         
         <div className={`navbar-links ${isOpen ? 'active' : ''}`}>

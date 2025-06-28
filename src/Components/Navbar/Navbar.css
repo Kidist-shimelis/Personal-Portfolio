@@ -12,10 +12,27 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: var(--transition);
+  background: linear-gradient(
+    135deg,
+    rgba(50, 50, 50, 0.7) 0%,
+    rgba(80, 80, 80, 0.5) 50%,
+    rgba(50, 50, 50, 0.7) 100%
+  );
+  backdrop-filter: blur(15px) brightness(1.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1); /* Metallic sheen */
+}
+
+/* Add a shimmer effect on scroll */
+.navbar.scrolled {
+  background: linear-gradient(
+    135deg,
+    rgba(60, 60, 60, 0.8) 0%,
+    rgba(100, 100, 100, 0.6) 50%,
+    rgba(60, 60, 60, 0.8) 100%
+  );
 }
 
 .navbar-container {
@@ -179,4 +196,15 @@
 /* Scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+.logo-container {
+  display: inline-block; /* or flex, depending on your layout */
+}
+
+.logo-image {
+  width: 50px; /* adjust size as needed */
+  height: 50px; /* must be same as width for perfect circle */
+  border-radius: 50%; /* this creates the circle */
+  object-fit: cover; /* ensures the image fills the circle properly */
+  border: 2px solid #fff; /* optional: adds a border around the circle */
 }
