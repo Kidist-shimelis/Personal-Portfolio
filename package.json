@@ -8,18 +8,16 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    
-  "name": "my-portfolio",
-  "homepage": "https://Kidist-shimelis.github.io/my-portfolio",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kidist-shimelis/my-portfolio.git"
-  },
-  "scripts": {
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
-  }
-
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Kidist-shimelis/my-portfolio.git"
+    },
+    "name": "my-portfolio",
+    "homepage": "https://Kidist-shimelis.github.io/my-portfolio",
+    "scripts": {
+      "predeploy": "vite build",
+      "deploy": "gh-pages -d dist"
+    }
   },
   "dependencies": {
     "react": "^19.1.0",
